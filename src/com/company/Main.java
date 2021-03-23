@@ -3,7 +3,10 @@ package com.company;
 public class Main {
     public static void main(String[] args) {
         int[] array = {12, 42, 523, 523, 124, 24};
-        System.out.println(sum(3,6));
+        System.out.println(sum(3, 6)); // вызов метода sum
+        System.out.println(min(3,1,3));
+        printArray(array);
+
 
 //        // в переменную int будут поочередно записыватся все элементы массива array
 //        // после знака : может указыватся, либо массив либо коллекция
@@ -95,9 +98,27 @@ public class Main {
 //
 
     }
+
     // объявление метода
-    public static int sum (int a , int b){
-        int c = a + b;
-        return  c;
+    public static int sum(int a, int b) {
+        return a + b;
+    }
+
+    //метод min принимает на вход три числа и вернуть минимальное из них
+
+    public static int min( int a, int b, int c){
+        if (a<b && a< c){
+            return a; //return сразу завершает метод и возвращает значение
+        }
+        if (b < c ){
+            return b;
+        }
+        return c;
+    }
+    public static void printArray (int[] array){
+        for (int x : array){
+            System.out.print(x);
+            System.out.println(" ");
+        }
     }
 }
