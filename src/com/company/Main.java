@@ -6,6 +6,7 @@ public class Main {
         System.out.println(sum(3, 6)); // вызов метода sum
         System.out.println(min(3,1,3));
         printArray(array);
+        System.out.println(sum2(1,2,3,4,5,6,7,8,8,9));
 
 
 //        // в переменную int будут поочередно записыватся все элементы массива array
@@ -120,5 +121,18 @@ public class Main {
             System.out.print(x);
             System.out.println(" ");
         }
+        //
+
+
+    }
+    public static int sum2(int ...a){
+        // метод с неопределенным числом параметров
+        //a обычный
+        int s =0;
+        for (int e : a) {
+            s += e;
+        }
+        return s;
+
     }
 }
