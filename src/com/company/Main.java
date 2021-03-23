@@ -37,6 +37,35 @@ public class Main {
         // 23 - 22 +22 - 22 - 23;
         System.out.println(z);
 
+        // break - прерывает выполнение цикла;(досрочно)
+        // continue - пропускает текущие выполнение итерации цикла и переходит к выполнению нового;
+
+        // 1. Дан массив целых чисел нужно вывести 1 число кратное 3
+
+        int [] testArray = { 1,2,12,5,67,3,6,12};
+        for(int i = 0; i<testArray.length ; i++){
+            if (testArray[i]%3 == 0 ){
+                System.out.println(testArray[i]);
+                break;
+            }
+        }
+
+        // 2. не выводить числа кратные трем
+        for( int j : testArray){
+            if (j % 3 ==0) {
+                // пропускаем
+                continue;
+            }
+            System.out.println(j);
+        }
+
+        for (int i =0; i < 10; i++){
+            for (int j = 0 ; j <5; j++){
+                break; // прервется цикл по j
+            }
+            break; // прервется цикл по i и по j
+        }
+
 
     }
 }
